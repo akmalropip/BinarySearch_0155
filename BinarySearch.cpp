@@ -9,8 +9,7 @@ void input()
 {
     while (true)
     {
-        cout << "Masukkan banyaknya elemen pada array (maksimal 10)
-        : ";
+        cout << "Masukkan banyaknya elemen pada array (maksimal 10) : ";
         cin >> nPanjang;
 
         if (nPanjang <= 10)
@@ -19,14 +18,13 @@ void input()
         }
         else
         {
-            cout << "\n[!] Jumlah elemen tidak boleh lebih dari 10.
-            Silahkan coba lagi.\n";
+            cout << "\n[!] Jumlah elemen tidak boleh lebih dari 10. Silahkan coba lagi.\n";
         }
     }
 
-    cout << "\n===================================\n";
-    cout << "       Masukkan Elemen Array       \n";
-    cout << "===================================\n";
+    cout << "\n=============================\n";
+    cout << "     Masukkan Elemen Array     \n";
+    cout << "\n=============================\n";
 
     for (int i = 0; i < nPanjang; i++)
     {
@@ -55,11 +53,11 @@ void bubbleSortArray()
 
 void display()
 {
-    cout << "\n=====================================\n";
-    cout << "  Elemen Array Setelah Diurutkan (Asc)\n";
-    cout << "====================================\n";
+    cout << "\n===================================\n";
+    cout << " Elemen Array Setelah Diurutkan (Asc)\n";
+    cout << "\n===================================\n";
 
-    for (int j = 0; j <nPanjang; j++)
+    for (int j = 0; j < nPanjang; j++)
     {
         cout << element[j];
         if (j < nPanjang - 1)
@@ -75,11 +73,11 @@ void binarySearch()
     char ulang;
     do
     {
-        cout << "\n=====================================\n";
+        cout << "\n===================================\n";
         cout << "       Pencarian Binary Search       \n";
-        cout << "====================================\n";
+        cout << "\n===================================\n";
 
-        cout << "Masukkan elemen yang ingin dicari: ";
+        cout << "Masukkan elemen yang ingin dicari";
         cin >> x;
 
         int low = 0;
@@ -91,8 +89,7 @@ void binarySearch()
 
             if (element[mid] == x)
             {
-                cout << "\n[✔] Elemen " << x << " ditemukan pada
-                indeks " << mid << "\n";
+                cout << "\n[✔] Elemen " << x << " ditemukan pada indeks " << mid << "\n";
                 return;
             }
 
@@ -110,13 +107,12 @@ void binarySearch()
 
         if (low > high)
         {
-            cout << "\n[x] Elemen " << x << " tidak ditemukan dalam
-            array.\n";
+            cout << "\n[x] Elemen " << x << " tidak ditemukan dalam array.\n";
         }
 
         cout << "\nIngin mencari lagi? (y/n): ";
         cin >> ulang;
-
+        
     } while (ulang == 'y' || ulang == 'Y');
 }
 
